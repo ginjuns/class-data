@@ -84,6 +84,11 @@ class GraduateStudent extends Student{
         System.out.println("구분 : 대학원생");
         System.out.println("-----------------------------------");
     }
+
+    public void setGraduateStudent(String input_labName,String input_advisor) {
+        this.labName = input_labName;
+        this.advisor = input_advisor;
+    }
 }
 
 public class Main {
@@ -156,6 +161,7 @@ public class Main {
                         System.out.println("2. 성별 수정");
                         System.out.println("3. 연락처 수정");
                         System.out.println("4. 성적 수정");
+                        System.out.println("5. 학생 구분 수정");
                         System.out.print("선택: ");
 
                         String choice = sc.nextLine();
@@ -186,6 +192,11 @@ public class Main {
                                 double gr = Double.parseDouble(sc.nextLine());
                                 s.setGrade(i, gr);
                             }
+                        }
+
+                        else if(choice.equals("5")){
+                            System.out.print("연구실 입력 : ");
+                            s.setGraduateStudent()
                         }
 
                         System.out.println("입력 완료");
